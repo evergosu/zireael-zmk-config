@@ -15,11 +15,11 @@
      /*    COMPOSED KEYMAPS
       *    ,-----------------------------------------------.        ,-----------------------------------------------.
       *    |   1   |   2   |   3   |   4   |   5   |   6   |        |   &   |   *   |   (   |   )   |   _   |   +   |
-      *    |   `   |   Q   |   W   |   E   |   R   |   T   |        |   Y   |   U   |   I   |   O   |   P   |  (x)  |
+      *    |  Esc  |   Q   |   W   |   E   |   R   |   T   |        |   Y   |   U   |   I   |   O   |   P   |  (x)  |
       *    |   !   |   @   |   #   |   $   |   %   |   ^   |        |   7   |   8   |   9   |   0   |   -   |   =   |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
-      *    |   `   |       |       |       |       |       |        |   {   |   [   |   ]   |   }   |       |   |   |
-      *    |SFT-Esc|   A   |   S   |   D   |   F   |   G   |        |   H   |   J   |   K   |   L   |   ;   | SFT-" |
+      *    |   ~   |       |       |       |       |       |        |   {   |   [   |   ]   |   }   |       |   |   |
+      *    | SFT-` |   A   |   S   |   D   |   F   |   G   |        |   H   |   J   |   K   |   L   |   ;   | SFT-" |
       *    |   ~   |  Lft  |  Dwn  |  Up   | Right |       |        |  Lft  |  Dwn  |  Up   | Right |       | \ (ё) |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
       *    |       |       |       |       |       |       |        |       |       |       |       |       |       |
@@ -36,9 +36,9 @@
 
      /*    DEFAULT LAYER
       *    ,-----------------------------------------------.        ,-----------------------------------------------.
-      *    |   `   |   Q   |   W   |   E   |   R   |   T   |        |   Y   |   U   |   I   |   O   |   P   |  (x)  |
+      *    |  Esc  |   Q   |   W   |   E   |   R   |   T   |        |   Y   |   U   |   I   |   O   |   P   |  (x)  |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
-      *    |SFT-Esc|   A   |   S   |   D   |   F   |   G   |        |   H   |   J   |   K   |   L   |   ;   | SFT-" |
+      *    | SFT-` |   A   |   S   |   D   |   F   |   G   |        |   H   |   J   |   K   |   L   |   ;   | SFT-" |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
       *    |  FN   |   Z   |   X   |   C   |   V   |   B   |        |   N   |   M   |   ,   |   .   |   /   | |>\|| |
       *    `-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------'
@@ -47,8 +47,8 @@
       */
       default_layer {
         bindings = <
-          &kp GRAVE   &kp Q   &kp W   &kp E   &kp R   &kp T          &kp Y   &kp U   &kp I     &kp O   &kp P      &kp LBKT
-      &mt LSHFT ESC   &kp A   &kp S   &kp D   &kp F   &kp G          &kp H   &kp J   &kp K     &kp L   &kp SEMI   &mt RSHFT SQT
+          &kp ESC     &kp Q   &kp W   &kp E   &kp R   &kp T          &kp Y   &kp U   &kp I     &kp O   &kp P      &kp LBKT
+      &mt LSHFT GRAVE &kp A   &kp S   &kp D   &kp F   &kp G          &kp H   &kp J   &kp K     &kp L   &kp SEMI   &mt RSHFT SQT
           &kp GLOBE   &kp Z   &kp X   &kp C   &kp V   &kp B          &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH   &kp C_PP
               &mt LCTRL TAB   &mt LCMD ESC    &lt LWR SPACE          &lt RSE RET     &mt LALT BSPC     &mt RCTRL DEL
         >;
@@ -78,7 +78,7 @@
       *    ,-----------------------------------------------.        ,-----------------------------------------------.
       *    |   1   |   2   |   3   |   4   |   5   |   6   |        |   &   |   *   |   (   |   )   |   _   |   +   |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
-      *    |   `   |       |       |       |       |       |        |   {   |   [   |   ]   |   }   |       |   |   |
+      *    |   ~   |       |       |       |       |       |        |   {   |   [   |   ]   |   }   |       |   |   |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
       *    |       |       |       |       |       |       |        |       |       |       |       |       |       |
       *    `-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------'
@@ -88,7 +88,7 @@
       raise_layer {
         bindings = <
           &kp N1   &kp N2   &kp N3   &kp N4  &kp N5  &kp N6         &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp UNDER &kp PLUS
-       &kp GRAVE   &none    &none    &none   &none   &none          &kp LBRC &kp LBKT &kp RBKT &kp RBRC &none     &kp PIPE
+       &kp TILDE   &none    &none    &none   &none   &none          &kp LBRC &kp LBKT &kp RBKT &kp RBRC &none     &kp PIPE
           &none    &none    &none    &none   &none   &none          &none    &none    &none    &none    &none     &none
                             &none    &none   &lt ADJ SPACE          &trans   &none    &none
         >;
