@@ -52,20 +52,20 @@
      /*    COMPOSED KEYMAPS
       *    ,-----------------------------------------------.        ,-----------------------------------------------.
       *    |   1   |   2   |   3   |   4   |   5   |   6   |        |   &   |   *   |   (   |   )   |   _   |   +   |
-      *    |  Esc  |   Q   |   W   |   E   |   R   |   T   |        |   Y   |   U   |   I   |   O   |   P   |  (x)  |
+      *    |   `   |   Q   |   W   |   E   |   R   |   T   |        |   Y   |   U   |   I   |   O   |   P   |  (x)  |
       *    |   !   |   @   |   #   |   $   |   %   |   ^   |        |   7   |   8   |   9   |   0   |   -   |   =   |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
       *    |   ~   | HOME  | PGDN  | PGUP  |  END  |       |        |   {   |   [   |   ]   |   }   |       |   |   |
-      *    | SFT-` |   A   |   S   |   D   |   F   |   G   |        |   H   |   J   |   K   |   L   |   ;   | SFT-" |
+      *    |  Esc  |   A   |   S   |   D   |   F   |   G   |        |   H   |   J   |   K   |   L   |   ;   |   "   |
       *    |   ~   |  Lft  |  Dwn  |  Up   | Right |       |        |  Lft  |  Dwn  |  Up   | Right |       | \ (ё) |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
       *    |       |       |       | PSCRN |  INS  |       |        |       |       |       |       |       | VolUp |
-      *    |  FN   |   Z   |   X   |   C   |   V   |   B   |        |   N   |   M   |   ,   |   .   |   /   | Media |
+      *    | SHIFT |   Z   |   X   |   C   |   V   |   B   |        |   N   |   M   |   ,   |   .   |   /   | Media |
       *    |       |       |       |       |       |       |        |       |  (ъ)  |       |       |       | VolDn |
       *    `-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------'
       *                            |       |       | A-Spc |        |       |       |       |
-      *                            |CTL-Tab|CMD-Esc| L-Spc |        | R-Ret |ALT-Bsp|CTL-Del|
-      *                            |       |       |       |        | A-Ret |       |       |
+      *                            |CTL-Esc|CMD-Tab| L-Spc |        | R-Ret |FN-Bspc|ALT-Del|
+      *                            |       |       |       |        | A-Ret |  Del  |       |
       *                            `-----------------------'        `-----------------------'
       */
     keymap {
@@ -73,21 +73,21 @@
 
      /*    DEFAULT LAYER
       *    ,-----------------------------------------------.        ,-----------------------------------------------.
-      *    |  Esc  |   Q   |   W   |   E   |   R   |   T   |        |   Y   |   U   |   I   |   O   |   P   |  (x)  |
+      *    |   `   |   Q   |   W   |   E   |   R   |   T   |        |   Y   |   U   |   I   |   O   |   P   |  (x)  |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
-      *    | SFT-` |   A   |   S   |   D   |   F   |   G   |        |   H   |   J   |   K   |   L   |   ;   | SFT-" |
+      *    |  Esc  |   A   |   S   |   D   |   F   |   G   |        |   H   |   J   |   K   |   L   |   ;   |   "   |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
-      *    |  FN   |   Z   |   X   |   C   |   V   |   B   |        |   N   |   M   |   ,   |   .   |   /   | Media |
+      *    | SHIFT |   Z   |   X   |   C   |   V   |   B   |        |   N   |   M   |   ,   |   .   |   /   | Media |
       *    `-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------'
-      *                            |CTL-Tab|CMD-Esc| L-Spc |        | R-Ret |ALT-Bsp|CTL-Del|
+      *                            |CTL-Esc|CMD-Tab| L-Spc |        | R-Ret |FN-Bspc|ALT-Del|
       *                            `-----------------------'        `-----------------------'
       */
       default_layer {
         bindings = <
-          &kp ESC     &kp Q   &kp W   &kp E   &kp R   &kp T          &kp Y   &kp U   &kp I     &kp O   &kp P      &kp LBKT
-      &mt LSHFT GRAVE &kp A   &kp S   &kp D   &kp F   &kp G          &kp H   &kp J   &kp K     &kp L   &kp SEMI   &mt RSHFT SQT
-          &kp GLOBE   &kp Z   &kp X   &kp C   &kp V   &kp B          &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH   &media
-              &mt LCTRL TAB   &mt LCMD ESC    &lt LWR SPACE          &lt RSE RET     &mt LALT BSPC     &mt RCTRL DEL
+          &kp GRAVE   &kp Q   &kp W   &kp E   &kp R   &kp T          &kp Y   &kp U   &kp I     &kp O   &kp P      &kp LBKT
+          &kp ESC     &kp A   &kp S   &kp D   &kp F   &kp G          &kp H   &kp J   &kp K     &kp L   &kp SEMI   &kp SQT
+          &kp LSHIFT  &kp Z   &kp X   &kp C   &kp V   &kp B          &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH   &media
+              &mt LCTRL ESC   &mt LCMD TAB    &lt LWR SPACE          &lt RSE RET     &mt GLOBE BSPC    &mt LALT DEL
         >;
       };
 
@@ -99,7 +99,7 @@
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
       *    |       |       |       |       |       |       |        |       |  (ъ)  |       |       |       | VolDn |
       *    `-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------'
-      *                            |       |       |       |        | A-Ret |       |       |
+      *                            |       |       |       |        | A-Ret |  Del  |       |
       *                            `-----------------------'        `-----------------------'
       */
       lower_layer {
@@ -107,7 +107,7 @@
           &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT &kp CARET    &kp N7   &kp N8   &kp N9 &kp N0    &kp MINUS &kp EQUAL
          &kp TILDE &kp LEFT &kp DOWN &kp UP   &kp RIGHT &none        &kp LEFT &kp DOWN &kp UP &kp RIGHT &none     &kp BSLH
           &none    &none    &none    &none    &none     &none        &none    &kp RBKT &none  &none     &none     &kp C_VOL_DN
-                                     &none    &none     &trans       &lt ADJ RET       &none  &none
+                                     &none    &none     &trans       &lt ADJ RET      &kp DEL &none
         >;
       };
 
