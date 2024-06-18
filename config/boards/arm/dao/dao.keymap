@@ -56,11 +56,11 @@
       *    |   !   |   @   |   #   |   $   |   %   |   ^   |        |   7   |   8   |   9   |   0   |   -   |   =   |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
       *    |   ~   | HOME  | PGDN  | PGUP  |  END  |       |        |   {   |   [   |   ]   |   }   |       |   |   |
-      *    |  Esc  |   A   |   S   |   D   |   F   |   G   |        |   H   |   J   |   K   |   L   |   ;   |   "   |
+      *    |SFT-Esc|   A   |   S   |   D   |   F   |   G   |        |   H   |   J   |   K   |   L   |   ;   | SFT-" |
       *    |   ~   |  Lft  |  Dwn  |  Up   | Right |       |        |  Lft  |  Dwn  |  Up   | Right |       | \ (ё) |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
       *    |       |       |       | PSCRN |  INS  |       |        |       |       |       |       |       | VolUp |
-      *    | SHIFT |   Z   |   X   |   C   |   V   |   B   |        |   N   |   M   |   ,   |   .   |   /   | Media |
+      *    |  FN   |   Z   |   X   |   C   |   V   |   B   |        |   N   |   M   |   ,   |   .   |   /   | Media |
       *    |       |       |       |       |       |       |        |       |  (ъ)  |       |       |       | VolDn |
       *    `-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------'
       *                            |       |       | A-Spc |        |       |       |       |
@@ -75,9 +75,9 @@
       *    ,-----------------------------------------------.        ,-----------------------------------------------.
       *    |   `   |   Q   |   W   |   E   |   R   |   T   |        |   Y   |   U   |   I   |   O   |   P   |  (x)  |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
-      *    |  Esc  |   A   |   S   |   D   |   F   |   G   |        |   H   |   J   |   K   |   L   |   ;   |   "   |
+      *    |SFT-Esc|   A   |   S   |   D   |   F   |   G   |        |   H   |   J   |   K   |   L   |   ;   | SFT-" |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
-      *    | SHIFT |   Z   |   X   |   C   |   V   |   B   |        |   N   |   M   |   ,   |   .   |   /   | Media |
+      *    |  FN   |   Z   |   X   |   C   |   V   |   B   |        |   N   |   M   |   ,   |   .   |   /   | Media |
       *    `-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------'
       *                            |CTL-Esc|CMD-Tab| L-Spc |        | R-Ret |FN-Bspc|ALT-Del|
       *                            `-----------------------'        `-----------------------'
@@ -85,8 +85,8 @@
       default_layer {
         bindings = <
           &kp GRAVE   &kp Q   &kp W   &kp E   &kp R   &kp T          &kp Y   &kp U   &kp I     &kp O   &kp P      &kp LBKT
-          &kp ESC     &kp A   &kp S   &kp D   &kp F   &kp G          &kp H   &kp J   &kp K     &kp L   &kp SEMI   &kp SQT
-          &kp LSHIFT  &kp Z   &kp X   &kp C   &kp V   &kp B          &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH   &media
+     &mt LSHIFT ESC   &kp A   &kp S   &kp D   &kp F   &kp G          &kp H   &kp J   &kp K     &kp L   &kp SEMI   &mt RSHIFT SQT
+          &kp GLOBE   &kp Z   &kp X   &kp C   &kp V   &kp B          &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH   &media
               &mt LCTRL ESC   &mt LCMD TAB    &lt LWR SPACE          &lt RSE RET     &mt GLOBE BSPC    &mt LALT DEL
         >;
       };
