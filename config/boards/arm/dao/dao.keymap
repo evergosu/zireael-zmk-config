@@ -95,9 +95,9 @@
       *    ,-----------------------------------------------.        ,-----------------------------------------------.
       *    |   !   |   @   |   #   |   $   |   %   |   ^   |        |   &   |   *   |   (   |   )   |   _   |   +   |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
-      *    |   ~   | HOME  | PGDN  | PGUP  |  END  |       |        |   {   |   [   |   ]   |   }   |       | \ (ё) |
+      *    |   ~   |   +   |   -   |   _   |   =   |       |        |   {   |   [   |   ]   |   }   |       | \ (ё) |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
-      *    |       |       |       | PSCRN |  INS  |       |        |       |  (ъ)  |       |       |       | VolDn |
+      *    |       |       |       |       |       |       |        |       |  (ъ)  |       |       |       | VolDn |
       *    `-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------'
       *                            |       |       |       |        | A-Ret |  Del  |       |
       *                            `-----------------------'        `-----------------------'
@@ -105,9 +105,9 @@
       lower_layer {
         bindings = <
           &kp EXCL &kp AT   &kp HASH  &kp DLLR  &kp PRCNT &kp CARET  &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp UNDER &kp PLUS
-        &kp TILDE  &kp HOME &kp PG_DN &kp PG_UP &kp END &none        &kp LBRC &kp LBKT &kp RBKT &kp RBRC &none     &kp BSLH
-          &none    &none    &none     &kp PSCRN &kp INS &none        &none    &none    &none    &none    &none     &kp C_VOL_DN
-                                      &none     &none   &trans       &lt ADJ RET       &kp DEL  &none
+         &kp TILDE &kp PLUS &kp MINUS &kp UNDER &kp EQUAL &none      &kp LBRC &kp LBKT &kp RBKT &kp RBRC &none     &kp BSLH
+          &none    &none    &none     &none     &none     &none      &none    &none    &none    &none    &none     &kp C_VOL_DN
+                                      &none     &none     &trans     &lt ADJ RET       &kp DEL  &none
         >;
       };
 
@@ -115,9 +115,9 @@
       *    ,-----------------------------------------------.        ,-----------------------------------------------.
       *    |   1   |   2   |   3   |   4   |   5   |   6   |        |   7   |   8   |   9   |   0   |   -   |   =   |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
-      *    |   ~   |   +   |   -   |   _   |   =   |       |        |  Lft  |  Dwn  |  Up   | Right |       |   |   |
+      *    |   ~   | HOME  | PGDN  | PGUP  |  END  |       |        |  Lft  |  Dwn  |  Up   | Right |       |   |   |
       *    |-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------|
-      *    |       |       |       |       |       |       |        |       |       |       |       |       | VolUp |
+      *    |       |       |       | PSCRN |  INS  |       |        |       |       |       |       |       | VolUp |
       *    `-------+-------+-------+-------+-------+-------|        |-------+-------+-------+-------+-------+-------'
       *                            |       |       | A-Spc |        |       |       |       |
       *                            `-----------------------'        `-----------------------'
@@ -125,7 +125,7 @@
       raise_layer {
         bindings = <
           &kp N1 &kp N2   &kp N3    &kp N4    &kp N5    &kp N6       &kp N7   &kp N8   &kp N9   &kp N0    &kp MINUS &kp EQUAL
-       &kp TILDE &kp PLUS &kp MINUS &kp UNDER &kp EQUAL &none        &kp LEFT &kp DOWN &kp UP   &kp RIGHT &none     &kp PIPE
+       &kp TILDE &kp HOME &kp PG_DN &kp PG_UP &kp END   &none        &kp LEFT &kp DOWN &kp UP   &kp RIGHT &none     &kp PIPE
           &none  &none    &none     &kp PSCRN &kp INS   &none        &none    &none    &none    &none     &none     &kp C_VOL_UP
                           &none     &none     &lt ADJ SPACE          &trans   &none    &none
         >;
